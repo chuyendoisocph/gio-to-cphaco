@@ -119,6 +119,15 @@
             content-visibility: auto;
             contain-intrinsic-size: 1px 800px;
         }
+        .lazy-media {
+          filter: blur(8px);
+          transform: scale(1.02);
+          transition: filter 0.45s ease, transform 0.45s ease;
+        }
+        .lazy-media.is-loaded {
+          filter: blur(0);
+          transform: scale(1);
+        }
         @media (prefers-reduced-motion: reduce) {
           *, *::before, *::after {
             animation: none !important;
@@ -338,7 +347,7 @@
 
       <!-- Card 1: Mộ Đơn / Mộ Đôi -->
       <div class="bg-surface-container-lowest border border-primary-container/20 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative h-full flex flex-col">
-        <img alt="Khu Trúc Lâm Bích Thủy" class="w-full h-full min-h-[420px] object-cover" loading="lazy" src="assets/images/TLBT.jpg"/>
+        <img alt="Khu Trúc Lâm Bích Thủy" class="w-full h-full min-h-[420px] object-cover lazy-media" decoding="async" fetchpriority="low" height="1260" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assets/images/TLBT.jpg" width="1680"/>
         <div class="p-5 sm:p-6 lg:p-8 mt-auto">
           <a href="#" data-open-contact-modal="true" class="tap-fast min-h-[44px] w-full inline-flex items-center justify-center bg-primary-container text-on-primary-container font-bold text-sm py-3 rounded-lg hover:brightness-110 transition-all">
             Nhận Thông Tin và Bảng Giá
@@ -348,7 +357,7 @@
 
       <!-- Card 2: Khu Gia Tộc -->
       <div class="bg-surface-container-lowest border border-primary-container/20 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-        <img alt="Khu Song Thân" class="w-full h-full min-h-[420px] object-cover" loading="lazy" src="assets/images/Song thân.jpg"/>
+        <img alt="Khu Song Thân" class="w-full h-full min-h-[420px] object-cover lazy-media" decoding="async" fetchpriority="low" height="1260" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assets/images/Song thân.jpg" width="1680"/>
         <div class="p-5 sm:p-6 lg:p-8 mt-auto">
           <a href="#" data-open-contact-modal="true" class="tap-fast min-h-[44px] w-full inline-flex items-center justify-center bg-primary-container text-on-primary-container font-bold text-sm py-3 rounded-lg hover:brightness-110 transition-all">
             Nhận Thông Tin và Bảng Giá
@@ -358,7 +367,7 @@
 
       <!-- Card 3: Mộ Song Thân -->
       <div class="bg-surface-container-lowest border border-primary-container/20 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-        <img alt="Linh Hoa Tuệ Đàn" class="w-full h-full min-h-[420px] object-cover" loading="lazy" src="assets/images/lINH HOA TUE DAN.jpg"/>
+        <img alt="Linh Hoa Tuệ Đàn" class="w-full h-full min-h-[420px] object-cover lazy-media" decoding="async" fetchpriority="low" height="1260" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assets/images/lINH HOA TUE DAN.jpg" width="1680"/>
         <div class="p-5 sm:p-6 lg:p-8 mt-auto">
           <a href="#" data-open-contact-modal="true" class="tap-fast min-h-[44px] w-full inline-flex items-center justify-center bg-primary-container text-on-primary-container font-bold text-sm py-3 rounded-lg hover:brightness-110 transition-all">
             Nhận Thông Tin và Bảng Giá
@@ -368,7 +377,7 @@
 
       <!-- Card 4: Đại Lộ Vĩnh Hằng -->
       <div class="bg-surface-container-lowest border border-primary-container/20 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-        <img alt="Đại lộ Vĩnh Hằng tại Hoa Viên" class="w-full h-full min-h-[420px] object-cover" loading="lazy" src="assets/images/dai lo vinh hang.jpg"/>
+        <img alt="Đại lộ Vĩnh Hằng tại Hoa Viên" class="w-full h-full min-h-[420px] object-cover lazy-media" decoding="async" fetchpriority="low" height="1260" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assets/images/dai lo vinh hang.jpg" width="1680"/>
         <div class="p-5 sm:p-6 lg:p-8 mt-auto">
           <a href="#" data-open-contact-modal="true" class="tap-fast min-h-[44px] w-full inline-flex items-center justify-center bg-primary-container text-on-primary-container font-bold text-sm py-3 rounded-lg hover:brightness-110 transition-all">
             Nhận Thông Tin và Bảng Giá
@@ -378,7 +387,7 @@
 
       <!-- Card 5: Long Phụng -->
       <div class="bg-surface-container-lowest border border-primary-container/20 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-        <img alt="Khu Long Phụng" class="w-full h-full min-h-[420px] object-cover" loading="lazy" src="assets/images/Long phụng.jpg"/>
+        <img alt="Khu Long Phụng" class="w-full h-full min-h-[420px] object-cover lazy-media" decoding="async" fetchpriority="low" height="1260" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assets/images/Long phụng.jpg" width="1680"/>
         <div class="p-5 sm:p-6 lg:p-8 mt-auto">
           <a href="#" data-open-contact-modal="true" class="tap-fast min-h-[44px] w-full inline-flex items-center justify-center bg-primary-container text-on-primary-container font-bold text-sm py-3 rounded-lg hover:brightness-110 transition-all">
             Nhận Thông Tin và Bảng Giá
@@ -388,7 +397,7 @@
 
       <!-- Card 6: Ảnh Tổng Quan -->
       <div class="bg-surface-container-lowest border border-primary-container/20 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-        <img alt="Ảnh tổng quan khu mộ phần" class="w-full h-full min-h-[420px] object-cover" loading="lazy" src="assets/images/1.jpg"/>
+        <img alt="Ảnh tổng quan khu mộ phần" class="w-full h-full min-h-[420px] object-cover lazy-media" decoding="async" fetchpriority="low" height="1260" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="assets/images/1.jpg" width="1680"/>
         <div class="p-5 sm:p-6 lg:p-8 mt-auto">
           <a href="#" data-open-contact-modal="true" class="tap-fast min-h-[44px] w-full inline-flex items-center justify-center bg-primary-container text-on-primary-container font-bold text-sm py-3 rounded-lg hover:brightness-110 transition-all">
             Nhận Thông Tin và Bảng Giá
@@ -677,6 +686,58 @@ Gọi 0869.555.444
 </div>
 </div>
 <script>
+      (function () {
+        const deferredImages = Array.from(document.querySelectorAll("img[data-src]"));
+
+        if (deferredImages.length === 0) {
+          return;
+        }
+
+        function hydrateImage(image) {
+          const source = image.getAttribute("data-src");
+
+          if (!source) {
+            return;
+          }
+
+          image.src = source;
+          image.removeAttribute("data-src");
+
+          if (image.complete) {
+            image.classList.add("is-loaded");
+            return;
+          }
+
+          image.addEventListener("load", function () {
+            image.classList.add("is-loaded");
+          }, { once: true });
+
+          image.addEventListener("error", function () {
+            image.classList.remove("lazy-media");
+          }, { once: true });
+        }
+
+        if (!("IntersectionObserver" in window)) {
+          deferredImages.forEach(hydrateImage);
+          return;
+        }
+
+        const imageObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            hydrateImage(entry.target);
+            observer.unobserve(entry.target);
+          });
+        }, { rootMargin: "250px 0px" });
+
+        deferredImages.forEach(function (image) {
+          imageObserver.observe(image);
+        });
+      })();
+
       (function () {
         const contactModal = document.getElementById("contact-modal");
         const closeModalButton = document.getElementById("contact-modal-close");
